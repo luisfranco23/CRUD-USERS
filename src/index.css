@@ -1,0 +1,154 @@
+:root{
+  --border-buttom: 1px solid #d3d3d3;
+  --color-line: #d3d3d3;
+  --box-shadow: 1px 3px 4px 0 black
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding: 30px;
+}
+.users{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.btn-create{
+  background-color: #673ab7;
+  color: white;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn-create:hover{
+  background-color: rgba(67, 29, 143, 0.877);
+}
+
+.btn-create:active{
+  box-shadow: var(--box-shadow);
+}
+.user{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 300px;
+}
+.user-header{
+  border-bottom: var(--border-buttom);
+}
+.info{
+  border-bottom: var(--border-buttom);
+}
+.btns {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  padding: 5px 0;
+}
+.user-btn {
+  font-size: 25px;
+  border: 1px solid var(--color-line);
+  border-radius: 5px;
+  color: var(--color-line);
+  background-color: white;
+  cursor: pointer;
+}
+.btn-delete {
+  background-color:#ed5151;
+  color: white;
+  border: 1px solid #ed5151;
+}
+.user-btn:hover{
+  box-shadow: var(--box-shadow)
+}
+
+span{
+  color: var(--color-line);
+}
+
+
+
+/* Modal */
+
+.Form-modal{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-modal {
+  width: 300px;
+  background-color: white;
+  min-height: 100px;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+}
+.close-form{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  color: #ed5151;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+.close-form:hover{
+  background-color: var(--color-line);
+  box-shadow: var(--box-shadow);
+}
+
+/* Final de modal */
+
+  /* Form */
+  
+.form-date {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+.form-date > input {
+  height: 35px;
+  border: 2px solid var(--color-line);
+  border-radius: 5px;
+}
+.form-date > input::placeholder{
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.form-date > label {
+  font-weight: 550;
+  padding-bottom: 5px;
+}
+input[type="date" i]{
+  font-size: 18px;
+  padding: 0 5px;
+  color: var(--color-line);
+}
+.form-btn{
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+}
