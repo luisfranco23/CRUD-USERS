@@ -49,7 +49,7 @@ function App() {
     setUpdateNameBoolean(false)
   }
 
-  const [deleteUser, setDeleteUser] = useState(true)
+  const [deleteUser, setDeleteUser] = useState(false)
   const [userDelete, setUserDelete] = useState()
 
   return (
