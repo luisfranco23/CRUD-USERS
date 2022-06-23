@@ -5,6 +5,7 @@ import Users from './components/Users'
 import useGetApi from './hooks/useGetApi'
 import { useForm} from 'react-hook-form'
 import axios from 'axios'
+import Delete from './components/Delete'
 
 function App() {
   const {users,getAllUsers} = useGetApi()
@@ -47,12 +48,19 @@ function App() {
     reset(defauldata)
     setUpdateNameBoolean(false)
   }
+
+  const [deleteUser, setDeleteUser] = useState(true)
+  const [userDelete, setUserDelete] = useState()
+
   return (
     <div className="App">
       <header className='header'>
         <h1>Usuarios</h1>
         <button onClick={closeAndOpen} className='btn-create'>+ Crear nuevo usuario</button>
       </header>
+      {
+        deleteUser && <Delete userDelete={userDelete} setDeleteUser={setDeleteUser} />
+      }
       <section className='users'>
         {
           users?.map(user => 
@@ -64,6 +72,8 @@ function App() {
               reset={reset}
               setIsBoolean={setIsBoolean}
               setUpdateNameBoolean={setUpdateNameBoolean}
+              setUserDelete={setUserDelete}
+              setDeleteUser={setDeleteUser}
             />)
         }
       </section>

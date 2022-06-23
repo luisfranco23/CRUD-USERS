@@ -1,12 +1,19 @@
 import React from 'react'
 import axios from 'axios'
 
-const Users = ({user,getAllUsers,setUpdateUser,reset,setIsBoolean,setUpdateNameBoolean}) => {
+const Users = ({user,getAllUsers,setUpdateUser,reset,setIsBoolean,setUpdateNameBoolean,
+    setUserDelete,setDeleteUser}) => {
 
+    const modalUser = () => {
+        setUserDelete(user)
+        setDeleteUser(true)
+    }
     const deletUser = () => {
         let id = user.id
         axios.delete(`https://users-crud1.herokuapp.com/users/${id}/`)
-            .then(res => console.log(res.data))
+            .then(res => {
+                modalUser()
+                console.log(res.data)})
             .catch(err => console.log(err))
             .finally(() => getAllUsers())
     }

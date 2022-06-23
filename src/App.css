@@ -1,0 +1,32 @@
+.delete-modal {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-modal-target {
+    background-color: white;
+    min-height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+    .delete-modal-target {
+        width: 400px;
+    }
+}
+
+.user-delete {
+    font-weight: 900;
+    color: black;
+}
